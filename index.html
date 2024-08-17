@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vanilla JS: Toggle password visibility</title>
+    <!-- bootstrap css 4.5.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- font awesome 5.13.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="mt-5 mb-5 text-center">Vanilla JS: Toggle password visibility</h2>
+      <div class="form-group">
+        <label for="ipnPassword">Password</label>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" id="ipnPassword">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="btnPassword">
+              <span class="fas fa-eye"></span>
+            </button>
+          </div>
+        </div>
+        <p class="text-muted">(Nhập pass vào ô input ở trên và click vào icon con mắt để hiển thị)</p>
+        <p>
+          <a
+            target="_blank"
+            href="https://viblo.asia/p/vanilla-js-project-an-hien-password-maGK73oOKj2"
+          >
+            https://viblo.asia/p/vanilla-js-project-an-hien-password-maGK73oOKj2
+          </a>
+        </p>
+      </div>
+    </div>
+    <script>
+      const ipnElement = document.querySelector('#ipnPassword')
+      const btnElement = document.querySelector('#btnPassword')
+
+      btnElement.addEventListener('click', function() {
+        const typeAttribute = ipnElement.getAttribute('type')
+        ipnElement.setAttribute('type', typeAttribute === 'password' ? 'text' : 'password')
+      })
+    </script>
+  </body>
+</html>
